@@ -17,6 +17,9 @@ namespace template_method
 
     abstract class AbstractClass
     {
+        private void Bla()
+        { }
+
         public void TemplateMethod()
         {
             Console.WriteLine("Abstract Class calls following methods:");
@@ -43,7 +46,7 @@ namespace template_method
     abstract class BasicPropertyTemplate
     {
         protected abstract string Name { get;}
-        public void PrintName() => Console.WriteLine($"Parent called {Name}");
+        public void PrintName() => Console.WriteLine($"Parent called {Name}.");
     }
     
     class ChildPropertyTemplate : BasicPropertyTemplate

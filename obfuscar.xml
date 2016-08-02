@@ -1,0 +1,5 @@
+﻿<?xml version='1.0'?>
+<Obfuscator>
+  <Var name="HidePrivateApi" value="true" />
+  <Module file="C:\Users\parallels\Documents\Visual Studio 2015\Projects\template-method\template-method\bin\Release\template-method.exe" />
+</Obfuscator>
