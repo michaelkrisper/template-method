@@ -31,19 +31,19 @@ namespace template_method
         protected override void PrimitiveOperation2() => Console.WriteLine("ConcreteClass1.PrimitiveOperation2");
     }
 
-    internal class ConcreteClass2 : AbstractClass
+    class ConcreteClass2 : AbstractClass
     {
         protected override void PrimitiveOperation1() => Console.WriteLine("ConcreteClass2.PrimitiveOperation1");
         protected override void PrimitiveOperation2() => Console.WriteLine("ConcreteClass2.PrimitiveOperation2");
     }
     
-    internal abstract class BasicPropertyTemplate
+    abstract class BasicPropertyTemplate
     {
         protected abstract string Name { get;}
         public void PrintName() => Console.WriteLine($"Parent called {Name}");
     }
     
-    internal class ChildPropertyTemplate : BasicPropertyTemplate
+    class ChildPropertyTemplate : BasicPropertyTemplate
     {
         protected override string Name => "ChildProperty";
     }
