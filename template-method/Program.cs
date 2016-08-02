@@ -6,35 +6,35 @@ namespace template_method
     {
         static void Main(string[] args)
         {
-            new Child1().Operation();
-            new Child2().Operation();
+            new ConcreteClass1().TemplateMethod();
+            new ConcreteClass2().TemplateMethod();
             new ChildPropertyTemplate().PrintName();
             Console.ReadKey();
         }
     }
 
-    abstract class Base
+    abstract class AbstractClass
     {
-        public void Operation()
+        public void TemplateMethod()
         {
-            Action1();
-            Action2();
+            PrimitiveOperation1();
+            PrimitiveOperation2();
         }
 
-        protected abstract void Action1();
-        protected abstract void Action2();
+        protected abstract void PrimitiveOperation1();
+        protected abstract void PrimitiveOperation2();
     }
 
-    class Child1 : Base
+    class ConcreteClass1 : AbstractClass
     {
-        protected override void Action1() => Console.WriteLine("Child1.Action1");
-        protected override void Action2() => Console.WriteLine("Child1.Action2");
+        protected override void PrimitiveOperation1() => Console.WriteLine("ConcreteClass1.PrimitiveOperation1");
+        protected override void PrimitiveOperation2() => Console.WriteLine("ConcreteClass1.PrimitiveOperation2");
     }
 
-    internal class Child2 : Base
+    internal class ConcreteClass2 : AbstractClass
     {
-        protected override void Action1() => Console.WriteLine("Child2.Action1");
-        protected override void Action2() => Console.WriteLine("Child2.Action2");
+        protected override void PrimitiveOperation1() => Console.WriteLine("ConcreteClass2.PrimitiveOperation1");
+        protected override void PrimitiveOperation2() => Console.WriteLine("ConcreteClass2.PrimitiveOperation2");
     }
     
     internal abstract class BasicPropertyTemplate
