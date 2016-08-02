@@ -50,4 +50,9 @@ namespace template_method
     {
         protected override string Name => "ChildProperty1";
     }
+
+    class ChildPropertyTemplate2 : BasicPropertyTemplate
+    {
+        protected override string Name => "ChildProperty2";
+    }
 }
