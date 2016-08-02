@@ -4,7 +4,7 @@ namespace template_method
 {
     static class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             new ConcreteClass1().TemplateMethod();
             new ConcreteClass2().TemplateMethod();
